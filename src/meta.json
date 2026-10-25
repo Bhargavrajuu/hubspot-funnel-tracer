@@ -1,0 +1,51 @@
+{
+  "num": "03",
+  "area": "Marketing",
+  "product": "Marketing-to-Revenue Attribution",
+  "title": "HubSpot Funnel Tracer",
+  "company": "HubSpot",
+  "why": "HubSpot pulls in a huge volume of inbound leads through content, free tools and ads, so turning those leads into paying customers is its core growth problem. This tool follows every lead to revenue and shows where value leaks.",
+  "problem": "Management observes high lead generation but relatively low revenue growth. Build an AI analytics system that traces the customer journey from campaign exposure through lead generation, conversion and revenue, identifying where the marketing funnel is losing value.",
+  "data_note": "6,000 leads from one quarter with every marketing touch, sales stage and closed revenue (sample data).",
+  "steps": [
+    {
+      "step": "Collect CRM touchpoints",
+      "detail": "Ad exposure, visits, downloads, demos, sales calls, deals"
+    },
+    {
+      "step": "Stitch journeys",
+      "detail": "Order every touch per lead into a path"
+    },
+    {
+      "step": "Measure funnel stages",
+      "detail": "Lead → MQL → SQL → Opportunity → Customer"
+    },
+    {
+      "step": "Markov chain attribution",
+      "detail": "Removal effect of each channel on the chance to convert"
+    },
+    {
+      "step": "Compare with last-touch",
+      "detail": "Show what the default report gets wrong"
+    },
+    {
+      "step": "Lead scoring model",
+      "detail": "Logistic regression on lead traits and follow-up speed"
+    },
+    {
+      "step": "Find the leaks",
+      "detail": "Biggest stage drop and channels with leads but no revenue"
+    },
+    {
+      "step": "LLM summary",
+      "detail": "AI analyst explains fixes"
+    }
+  ],
+  "questions": [
+    "Where is the funnel losing the most value?",
+    "Which channel brings leads but no revenue?",
+    "Why does last-touch reporting mislead us?",
+    "What would faster follow-up be worth?"
+  ],
+  "author": "K Bhargav Raju"
+}

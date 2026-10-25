@@ -1,0 +1,211 @@
+{
+  "title": "HubSpot Funnel Tracer",
+  "company": "HubSpot",
+  "kpis": [
+    {
+      "label": "Leads this quarter",
+      "value": "6,000",
+      "note": "From 7 channels"
+    },
+    {
+      "label": "Lead -> customer",
+      "value": "6.0%",
+      "note": "363 customers"
+    },
+    {
+      "label": "Closed revenue",
+      "value": "$8.8M",
+      "note": "$1.5K per lead"
+    },
+    {
+      "label": "Leakiest stage",
+      "value": "MQL -> SQL",
+      "note": "Only 40.6% move on"
+    },
+    {
+      "label": "Faster follow-up worth",
+      "value": "+$11.8M",
+      "note": "per year at a 4-hour target"
+    }
+  ],
+  "algorithm": [
+    {
+      "step": "Collect CRM touchpoints",
+      "output": "6,000 leads, 17,972 touches"
+    },
+    {
+      "step": "Stitch journeys",
+      "output": "Average journey 3.0 touches"
+    },
+    {
+      "step": "Measure funnel stages",
+      "output": "Lead -> customer 6.0%"
+    },
+    {
+      "step": "Markov chain attribution",
+      "output": "Baseline conversion 6.05%; top removal effect Content Downloads"
+    },
+    {
+      "step": "Compare with last-touch",
+      "output": "Biggest last-touch gap: Partner Referrals"
+    },
+    {
+      "step": "Lead scoring model",
+      "output": "Strongest trait: ICP fit score"
+    },
+    {
+      "step": "Find the leaks",
+      "output": "Worst stage: MQL -> SQL at 40.6%"
+    },
+    {
+      "step": "LLM summary",
+      "output": "Ready"
+    }
+  ],
+  "tables": {
+    "Channel scorecard": [
+      {
+        "channel": "Content Downloads",
+        "first_touch_leads": 1433,
+        "touched_leads": 3149,
+        "markov_revenue": 1697105.0,
+        "last_touch_revenue": 1675647.0,
+        "revenue_per_touched_lead": 539.0,
+        "lead_share": 0.239,
+        "revenue_share": 0.193
+      },
+      {
+        "channel": "LinkedIn Ads",
+        "first_touch_leads": 1284,
+        "touched_leads": 2957,
+        "markov_revenue": 1574017.0,
+        "last_touch_revenue": 1218333.0,
+        "revenue_per_touched_lead": 532.0,
+        "lead_share": 0.214,
+        "revenue_share": 0.179
+      },
+      {
+        "channel": "Organic Search",
+        "first_touch_leads": 1029,
+        "touched_leads": 2311,
+        "markov_revenue": 1427942.0,
+        "last_touch_revenue": 1244844.0,
+        "revenue_per_touched_lead": 618.0,
+        "lead_share": 0.172,
+        "revenue_share": 0.163
+      },
+      {
+        "channel": "Email Nurture",
+        "first_touch_leads": 885,
+        "touched_leads": 2191,
+        "markov_revenue": 1299292.0,
+        "last_touch_revenue": 1229273.0,
+        "revenue_per_touched_lead": 593.0,
+        "lead_share": 0.148,
+        "revenue_share": 0.148
+      },
+      {
+        "channel": "Paid Search",
+        "first_touch_leads": 727,
+        "touched_leads": 1890,
+        "markov_revenue": 1217050.0,
+        "last_touch_revenue": 1068127.0,
+        "revenue_per_touched_lead": 644.0,
+        "lead_share": 0.121,
+        "revenue_share": 0.139
+      },
+      {
+        "channel": "Webinars",
+        "first_touch_leads": 425,
+        "touched_leads": 1163,
+        "markov_revenue": 908629.0,
+        "last_touch_revenue": 1107951.0,
+        "revenue_per_touched_lead": 781.0,
+        "lead_share": 0.071,
+        "revenue_share": 0.104
+      },
+      {
+        "channel": "Partner Referrals",
+        "first_touch_leads": 217,
+        "touched_leads": 673,
+        "markov_revenue": 649129.0,
+        "last_touch_revenue": 1228989.0,
+        "revenue_per_touched_lead": 965.0,
+        "lead_share": 0.036,
+        "revenue_share": 0.074
+      }
+    ],
+    "Funnel stages": [
+      {
+        "stage": "Leads",
+        "count": 6000,
+        "rate_from_prior": null
+      },
+      {
+        "stage": "MQL",
+        "count": 3057,
+        "rate_from_prior": 0.509
+      },
+      {
+        "stage": "SQL",
+        "count": 1240,
+        "rate_from_prior": 0.406
+      },
+      {
+        "stage": "Opportunity",
+        "count": 776,
+        "rate_from_prior": 0.626
+      },
+      {
+        "stage": "Customer",
+        "count": 363,
+        "rate_from_prior": 0.468
+      }
+    ],
+    "Routing at this cutoff": [
+      {
+        "measure": "Leads sent to sales",
+        "value": "884 (15%)"
+      },
+      {
+        "measure": "Revenue from those leads",
+        "value": "$2.7M (31%)"
+      },
+      {
+        "measure": "Win rate of routed leads",
+        "value": "13.7%"
+      },
+      {
+        "measure": "Median follow-up today (hrs)",
+        "value": "11.1"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "title": "Fix the MQL -> SQL handoff",
+      "body": "Only 40.6% of MQLs move on. Review lost MQLs with sales weekly and tighten what qualifies.",
+      "impact": "1,817 lost"
+    },
+    {
+      "title": "Call every MQL back within 4 hours",
+      "body": "Median follow-up is 11.1 hours and slow follow-up is one of the strongest negatives in the lead score.",
+      "impact": "+$11.8M/yr"
+    },
+    {
+      "title": "Optimise LinkedIn Ads for pipeline, not form fills",
+      "body": "It brings 21% of first-touch leads but only $532 per touched lead.",
+      "impact": "Budget shift"
+    },
+    {
+      "title": "Invest more in Partner Referrals and Webinars",
+      "body": "Highest revenue per touched lead and large Markov removal effects; last-touch reporting under-credits them.",
+      "impact": "Higher ROI"
+    },
+    {
+      "title": "Send only 20+ point leads to sales",
+      "body": "They are 15% of leads and produced 31% of revenue.",
+      "impact": "Rep time"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+stage,count,rate_from_prior
+Leads,6000,
+MQL,3057,0.509
+SQL,1240,0.406
+Opportunity,776,0.626
+Customer,363,0.468
